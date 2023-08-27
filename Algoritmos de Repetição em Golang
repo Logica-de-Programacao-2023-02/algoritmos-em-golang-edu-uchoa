@@ -1,0 +1,155 @@
+1-Faça um algoritmo que imprima os números de 1 a 10 em ordem crescente.-
+
+package main
+import "fmt"
+func main() {
+	for i := 1; i <= 10; i++ {
+		fmt.Println(i)
+	}
+}
+
+2-Faça um algoritmo que imprima os números pares de 0 a 20.-
+
+package main
+import "fmt"
+func main() {
+	for i := 0; i <= 20; i += 2 {
+		fmt.Println(i)
+	}
+}
+
+3-Faça um algoritmo que imprima os números ímpares de 1 a 19.-
+
+package main
+import "fmt"
+func main() {
+	for i := 1; i <= 19; i += 2 {
+		fmt.Println(i)
+	}
+}
+
+4-Faça um algoritmo que imprima os múltiplos de 3 de 0 a 30.-
+
+package main
+import "fmt"
+func main() {
+	for i := 0; i <= 30; i += 3 {
+		fmt.Println(i)
+	}
+}
+
+5-Faça um algoritmo que imprima os números de 10 a 1 em ordem decrescente.-
+
+package main
+import "fmt"
+func main() {
+	for i := 10; i >= 1; i-- {
+		fmt.Println(i)
+	}
+}
+
+6-Faça um algoritmo que imprima a tabuada de multiplicação de 1 a 10 para um número fornecido pelo usuário.-
+
+package main
+import "fmt"
+func main() {
+	var numero int
+	fmt.Print("Digite um número: ")
+	fmt.Scan(&numero)
+	fmt.Printf("Tabuada de multiplicação para %d:\n", numero)
+	for i := 1; i <= 10; i++ {
+		resultado := numero * i
+		fmt.Printf("%d x %d = %d\n", numero, i, resultado)
+	}
+}
+
+7-Faça um algoritmo que imprima os números de 1 a 100, substituindo os múltiplos de 3 pela palavra "Fizz" e os múltiplos de 5 pela palavra "Buzz". Para os números que são múltiplos de ambos, utilize a palavra "FizzBuzz".-
+
+package main
+import "fmt"
+func main() {
+	for i := 1; i <= 100; i++ {
+		switch {
+		case i%3 == 0 && i%5 == 0:
+			fmt.Println("FizzBuzz")
+		case i%3 == 0:
+			fmt.Println("Fizz")
+		case i%5 == 0:
+			fmt.Println("Buzz")
+		default:
+			fmt.Println(i)
+		}
+	}
+}
+
+8-Faça um algoritmo que leia um número inteiro positivo e mostre todos os seus divisores.-
+
+package main
+import "fmt"
+func main() {
+	var numero int
+	fmt.Print("Digite um número inteiro positivo: ")
+	fmt.Scan(&numero)
+	fmt.Printf("Divisores de %d: ", numero)
+	for i := 1; i <= numero; i++ {
+		if numero%i == 0 {
+			fmt.Printf("%d ", i)
+		}
+	}
+	fmt.Println()
+}
+
+9-Faça um algoritmo que leia vários números inteiros e mostre a média aritmética entre eles. A leitura deve ser interrompida quando for lido o valor zero.-
+
+package main
+import "fmt"
+func main() {
+	fmt.Println("Digite vários números inteiros (insira 0 para encerrar):")
+	var numero, soma, quantidade int
+	for {
+		fmt.Print("Digite um número inteiro: ")
+		fmt.Scan(&numero)
+		if numero == 0 {
+			break
+		}
+		soma += numero
+		quantidade++
+	}
+	if quantidade > 0 {
+		media := float64(soma) / float64(quantidade)
+		fmt.Printf("A média aritmética é: %.2f\n", media)
+	} else {
+		fmt.Println("Nenhum número válido foi inserido.")
+	}
+}
+
+10-Faça um algoritmo que leia vários números inteiros e mostre o maior deles. A leitura deve ser interrompida quando for lido o valor zero.-
+
+package main
+import "fmt"
+func main() {
+	fmt.Println("Digite vários números inteiros (insira 0 para encerrar):")
+	var numero, maior int
+	primeiro := true
+	for {
+		fmt.Print("Digite um número inteiro: ")
+		fmt.Scan(&numero)
+		if numero == 0 {
+			break
+		}
+		if primeiro || numero > maior {
+			maior = numero
+			primeiro = false
+		}
+	}
+	if primeiro {
+		fmt.Println("Nenhum número válido foi inserido.")
+	} else {
+		fmt.Printf("O maior número é: %d\n", maior)
+	}
+}
+
+
+
+
+
